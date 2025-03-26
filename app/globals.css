@@ -14,3 +14,21 @@ body {
     text-wrap: balance;
   }
 }
+
+
+@media only screen and (max-width: 749px) {
+  .splide__list {
+    display: grid !important;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    transform: translateX(0) !important;
+  }
+
+  .splide__slide{
+    width: 100% !important;
+  }
+
+  .carousel-nav-buttons {
+    display: none;
+  }
+}
