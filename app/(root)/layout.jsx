@@ -7,7 +7,7 @@ const HomeLayout = ({ children }) => {
     <div>
       <AnnouncementBar />
       <Header />
-      <main className="pt-10">{children}</main>
+      <main className="">{children}</main>
     </div>
   );
 };
