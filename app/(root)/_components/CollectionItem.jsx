@@ -9,7 +9,7 @@ const CollectionItem = ({ product }) => {
       className={`splide__slide ${classes.splide__slide} w-full bg-white`}
     >
       <Link href={product.link}>
-        <div className="group overflow-hidden block h-64 w-full">
+        <div className="group overflow-hidden block h-80 w-full">
           <img
             src={product.image}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
