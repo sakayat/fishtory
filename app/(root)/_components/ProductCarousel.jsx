@@ -216,13 +216,13 @@ const ProductCarousel = () => {
             <div className="splide__list">
               {activeTab === "new"
                 ? newProducts.map((product) => (
-                    <div className="splide__slide">
-                      <ProductCard product={product} key={product.id} />
+                    <div className="splide__slide" key={product.id}>
+                      <ProductCard product={product} />
                     </div>
                   ))
                 : bestsellers.map((product) => (
-                    <div className="splide__slide">
-                      <ProductCard product={product} key={product.id} />
+                    <div className="splide__slide" key={product.id}>
+                      <ProductCard product={product} />
                     </div>
                   ))}
             </div>
