@@ -43,7 +43,25 @@ const ProductCard = ({ product }) => {
       </div>
       <div className="p-6 flex flex-col flex-grow gap-3">
         <h3 className="text-lg font-bold">{product.title}</h3>
-        <p className="text-lg">${product.price.toFixed(2)}</p>
+        {product.reviewsCount && (
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-gray-700 font-medium">
+              ({product.reviewsCount}{" "}
+              {product.reviewsCount === 1 ? "Review" : "Reviews"})
+            </span>
+          </div>
+        )}
+        <div className="flex items-center gap-2 text-sm">
+          <span className="font-bold">${product.price.toFixed(2)}</span>
+          {product.servings && (
+            <>
+              <span className="text-gray-400 px-1">|</span>
+              <div className="flex items-center gap-1">
+                <span className="font-medium">Serves 2+</span>
+              </div>
+            </>
+          )}
+        </div>
         <Link
           href={product.link}
           className="border px-4 md:px-6 py-3 border-white bg-black text-white hover:bg-transparent hover:border-black hover:text-black transition-colors uppercase text-xs font-bold w-fit"

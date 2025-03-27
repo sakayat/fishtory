@@ -3,6 +3,7 @@ import Hero from "./_components/Hero";
 import FoodSelection from "./_components/FoodSelection";
 import ProductCarousel from "./_components/ProductCarousel";
 import IntroVideoOverlay from "./_components/IntroVideoOverlay";
+import DeliveryService from "./_components/DeliveryService";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FoodSelection />
       <ProductCarousel />
       <IntroVideoOverlay />
+      <DeliveryService />
     </div>
   );
 }
