@@ -5,7 +5,7 @@ import ProductCarousel from "./_components/ProductCarousel";
 import IntroVideoOverlay from "./_components/IntroVideoOverlay";
 import DeliveryService from "./_components/DeliveryService";
 import Newsletter from "./_components/Newsletter";
-import Footer from "./_components/Footer";
+
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <IntroVideoOverlay />
       <DeliveryService />
       <Newsletter />
-      <Footer />
+
     </div>
   );
 }
