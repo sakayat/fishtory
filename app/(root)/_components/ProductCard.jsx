@@ -42,7 +42,11 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
       <div className="p-6 flex flex-col flex-grow gap-3">
-        <h3 className="text-lg font-bold">{product.title}</h3>
+        <h3 className="text-lg font-bold">
+          {product.title.length > 30
+            ? `${product.title.substring(0, 25)}...`
+            : product.title}
+        </h3>
         {product.reviewsCount && (
           <div className="flex items-center gap-2">
             <span className="text-xs text-gray-700 font-medium">
