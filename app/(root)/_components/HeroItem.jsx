@@ -16,7 +16,7 @@ const HeroItem = ({ item }) => {
           {item.description}
         </p>
         <Link href={item.buttonLink}>
-          <button className="border-2  px-4 md:px-6 py-1 md:py-2  text-black border-white bg-white hover:bg-transparent hover:text-white transition-colors uppercase text-xs font-bold">
+          <button className="border-2  px-4 md:px-6 py-3 text-black border-white bg-white hover:bg-transparent hover:text-white transition-colors uppercase text-xs font-bold">
             {item.buttonText}
           </button>
         </Link>
