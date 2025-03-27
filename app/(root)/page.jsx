@@ -4,6 +4,7 @@ import FoodSelection from "./_components/FoodSelection";
 import ProductCarousel from "./_components/ProductCarousel";
 import IntroVideoOverlay from "./_components/IntroVideoOverlay";
 import DeliveryService from "./_components/DeliveryService";
+import Newsletter from "./_components/Newsletter";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ProductCarousel />
       <IntroVideoOverlay />
       <DeliveryService />
+      <Newsletter />
     </div>
   );
 }
