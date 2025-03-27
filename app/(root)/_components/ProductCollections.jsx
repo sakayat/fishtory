@@ -4,11 +4,12 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import Splide from "@splidejs/splide";
 import SectionTitle from "./SectionTitle";
 import { MoveLeft, MoveRight } from "lucide-react";
+import classes from "./Collection.module.css";
 import CollectionItem from "./CollectionItem";
 
 const ProductCollections = () => {
   const splideRef = useRef(null);
-  const [splide, setSplide] = useState(null);
+  const splideInstanceRef = useRef(null);
 
   const productData = [
     {
@@ -68,7 +69,7 @@ const ProductCollections = () => {
   ];
 
   useEffect(() => {
-    const splideInstance = new Splide(splideRef.current, {
+    const splide = new Splide(splideRef.current, {
       type: "loop",
       perPage: 3,
       perMove: 1,
@@ -77,27 +78,28 @@ const ProductCollections = () => {
       arrows: false,
     });
 
-    splideInstance.mount();
-    setSplide(splideInstance);
+    splide.mount();
 
-    return () => splideInstance.destroy();
+    splideInstanceRef.current = splide;
+
+    return () => splide.destroy();
   }, []);
 
-  const goNext = () => {
-    if (splide) {
-      splide.go("+");
+  const handleNext = () => {
+    if (splideInstanceRef.current) {
+      splideInstanceRef.current.go("+");
     }
   };
 
-  const goPrev = () => {
-    if (splide) {
-      splide.go("-");
+  const handlePrev = () => {
+    if (splideInstanceRef.current) {
+      splideInstanceRef.current.go("-");
     }
   };
 
   return (
     <div className="md:mt-[38rem] lg:mt-0">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-5">
         <div className="relative">
           <SectionTitle
             title="The UK's Best Online Fresh Fishmonger"
@@ -110,14 +112,14 @@ const ProductCollections = () => {
 
           <div className="hidden md:flex items-center gap-2 absolute top-5 right-0">
             <button
-              onClick={goPrev}
-              className="text-black p-1.5 font-bold transition-all border border-gray-400 rounded-full w-8 h-8"
+              onClick={handlePrev}
+              className="text-black font-bold transition-all border border-gray-400 hover:bg-black hover:text-white hover:border-black rounded-full flex items-center justify-center w-8 h-8"
             >
               <MoveLeft size={18} />
             </button>
             <button
-              onClick={goNext}
-              className="text-black p-1.5 font-bold transition-all border border-gray-400 rounded-full w-8 h-8"
+              onClick={handleNext}
+              className="text-black font-bold transition-all border border-gray-400 hover:bg-black hover:text-white hover:border-black rounded-full flex items-center justify-center w-8 h-8"
             >
               <MoveRight size={18} />
             </button>
@@ -125,7 +127,7 @@ const ProductCollections = () => {
         </div>
         <div ref={splideRef} className="splide">
           <div className="splide__track">
-            <div className="splide__list">
+            <div className={`splide__list ${classes.splide__list}`}>
               {productData.map((product) => (
                 <CollectionItem product={product} key={product.id} />
               ))}

@@ -1,9 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import classes from "./Collection.module.css";
 
 const CollectionItem = ({ product }) => {
   return (
-    <div key={product.id} className="splide__slide w-full bg-white">
+    <div
+      key={product.id}
+      className={`splide__slide ${classes.splide__slide} w-full bg-white`}
+    >
       <Link href={product.link}>
         <div className="group overflow-hidden block h-64 w-full">
           <img
