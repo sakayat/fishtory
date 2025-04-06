@@ -74,7 +74,7 @@ const OrdersTab = ({ accountInfo }) => {
           ))}
         </div>
       ) : (
-        <p className="text-gray-600">You haven't placed any orders yet.</p>
+        <p className="text-gray-600">You have not placed any orders yet.</p>
       )}
     </div>
   );

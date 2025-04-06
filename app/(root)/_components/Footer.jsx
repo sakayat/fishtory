@@ -106,7 +106,7 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Contact</h3>
             <address className="not-italic">
-              <p className="text-gray-300 mb-2">123 Fisherman's Wharf</p>
+              <p className="text-gray-300 mb-2">123 Fisherman Wharf</p>
               <p className="text-gray-300 mb-2">Seaside, CA 93955</p>
               <p className="text-gray-300 mb-2">
                 <a

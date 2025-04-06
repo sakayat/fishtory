@@ -74,7 +74,7 @@ const OverviewTab = ({ accountInfo, setActiveTab }) => {
             </table>
           </div>
         ) : (
-          <p className="text-gray-600">You haven't placed any orders yet.</p>
+          <p className="text-gray-600">You have not placed any orders yet.</p>
         )}
 
         <div className="mt-3">
