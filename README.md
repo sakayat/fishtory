@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fishtory
+
+Fishtory is an e-commerce web application built with Next.js for selling fish products.
+
+## Description
+
+Fishtory offers a modern online shopping experience for fishing enthusiasts and seafood lovers. The platform provides a wide selection of fresh fish, fishing equipment, and accessories with detailed product information, high-quality images, and seamless checkout.
+
+## Features
+
+- Product browsing and filtering
+- Shopping cart functionality
+- User account management
+- Collections showcase
+- Responsive design for all devices
+- Modern UI with Tailwind CSS
+
+## Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Slider**: [Splide.js](https://splidejs.com/)
+- **UI Components**: Custom components with styled-components
 
 ## Getting Started
 
-First, run the development server:
+### Clone the Repository
+
+First, clone the repository to your local machine:
+
+```bash
+git clone https://github.com/sakayat/fishtory.git
+cd fishtory
+```
+
+### Install Dependencies
+
+Then, install the dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+fishtory/
+├── app/                       # Next.js app router
+│   ├── (root)/                # Main application pages
+│   │   ├── _components/       # Shared components
+│   │   │   ├── Header.jsx     # Site header with navigation
+│   │   │   ├── Footer.jsx     # Site footer
+│   │   │   ├── Hero.jsx       # Homepage hero section
+│   │   │   ├── ProductCard.jsx # Product display card
+│   │   │   ├── ProductDetails.jsx # Product detailed view
+│   │   │   ├── CartItem.jsx   # Shopping cart item
+│   │   │   ├── ProductCarousel.jsx # Product showcase carousel
+│   │   │   ├── DeliveryService.jsx # Delivery information
+│   │   │   ├── Newsletter.jsx # Newsletter signup
+│   │   │   ├── OrdersTab.jsx  # User orders dashboard tab
+│   │   │   ├── AddressTab.jsx # User address management tab
+│   │   │   └── ... (additional components)
+│   │   ├── products/         # Product pages
+│   │   │   └── [slug]/       # Dynamic product detail pages
+│   │   ├── cart/             # Shopping cart page
+│   │   ├── collections/      # Product collections pages
+│   │   ├── account/          # User account pages
+│   │   │   ├── login/        # User login
+│   │   │   └── register/     # User registration
+│   │   ├── layout.jsx        # Root layout with common UI
+│   │   └── page.jsx          # Homepage
+│   ├── globals.css           # Global styles
+│   ├── layout.js             # Root layout with metadata
+│   └── favicon.ico           # Site favicon
+├── public/                   # Static assets
+│   └── images/               # Image assets
+├── package.json              # Dependencies and scripts
+├── package-lock.json         # Dependency lock file
+├── tailwind.config.js        # Tailwind CSS configuration
+├── postcss.config.mjs        # PostCSS configuration
+├── next.config.mjs           # Next.js configuration
+├── jsconfig.json             # JavaScript configuration
+├── .eslintrc.json            # ESLint configuration
+└── .gitignore                # Git ignore file
+```
